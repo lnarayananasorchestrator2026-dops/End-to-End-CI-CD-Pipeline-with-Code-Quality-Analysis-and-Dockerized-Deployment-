@@ -5,7 +5,9 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/lnarayananasorchestrator2026-dops/End-to-End-CI-CD-Pipeline-with-Code-Quality-Analysis-and-Dockerized-Deployment-'
+                
+            git branch: 'main', url: 'https://github.com/lnarayananasorchestrator2026-dops/End-to-End-CI-CD-Pipeline-with-Code-Quality-Analysis-and-Dockerized-Deployment-.git'
+
             }
         }
 
@@ -23,7 +25,9 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 5000:8080 poc-app || true'
+                sh 'docker rm -f poc-app || true'
+                sh 'docker run -d -p 5000:8080 --name poc-app poc-app'
+
             }
         }
     }
