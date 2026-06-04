@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/<your-username>/poc-cicd-java.git'
+                git 'https://github.com/lnarayananasorchestrator2026-dops/End-to-End-CI-CD-Pipeline-with-Code-Quality-Analysis-and-Dockerized-Deployment-'
             }
         }
 
