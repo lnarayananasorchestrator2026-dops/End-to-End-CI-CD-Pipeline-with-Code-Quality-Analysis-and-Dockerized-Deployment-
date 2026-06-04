@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:8080 poc-app || true'
+                sh 'docker run -d -p 5000:8080 poc-app || true'
             }
         }
     }
